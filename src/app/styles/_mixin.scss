@@ -1,3 +1,5 @@
+@import './variables';
+
 @mixin default-animation {
   transition: all 0.5s ease;
 }
@@ -17,4 +19,15 @@
       width: 100%;
     }
   }
+}
+
+@mixin input-textarea-border {
+  border: 2px $mainTextColor solid;
+  border-radius: 4px;
+}
+
+@mixin flex-j-a-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

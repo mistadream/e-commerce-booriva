@@ -1,0 +1,59 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.radioContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.radioButton {
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  &:checked {
+    & + .radioLabel::before {
+      background-color: $secondaryAccentColor;
+      border: 1px solid $secondaryAccentColor;
+      @include default-animation;
+    }
+  }
+}
+
+.radioLabel {
+  cursor: pointer;
+  &::before {
+    content: '';
+    display: inline-block;
+    height: 10px;
+    width: 12px;
+    border-radius: 50%;
+    border: 1px solid #1f1f1f;
+    margin-right: 14px;
+  }
+}
+
+.deliveryDescription {
+  color: $mainTextColor;
+  &::after {
+    content: '—';
+    display: inline-block;
+    margin: 0 5px;
+  }
+}
+.deliveryCost {
+  color: $secondaryAccentColor;
+}
+
+@media screen and (max-width: 480px) {
+  .deliveryDescription {
+    font-size: 14px;
+  }
+  .radioLabel::before {
+    height: 8px;
+    width: 8px;
+  }
+}

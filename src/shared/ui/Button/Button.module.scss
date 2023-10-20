@@ -3,6 +3,8 @@
 
 .button {
   background: url('./img/bg-color.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 14px;
   font-family: $additionalFontFamily;
   color: $buttonTextColor;
@@ -10,7 +12,7 @@
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 8px;
-  padding-bottom: 15px;
+  padding-bottom: 13px;
 
   text-transform: uppercase;
   cursor: pointer;
@@ -18,5 +20,10 @@
   @include default-animation;
   &:hover {
     color: $activeAccentColor;
+  }
+}
+@media screen and (max-width: 480px) {
+  .button {
+    font-size: 12px;
   }
 }
