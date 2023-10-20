@@ -1,0 +1,36 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.itemLink {
+  @include default-animation;
+  position: relative;
+  background: none;
+  color: $mainTextColor;
+  text-decoration: none;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: $mainFontFamily;
+  &:hover {
+    color: $secondaryAccentColor;
+  }
+  &:active {
+    color: $activeAccentColor;
+  }
+  &:focus {
+    @include underline;
+  }
+}
+
+.itemLinkActive {
+  color: $secondaryAccentColor;
+  font-style: italic;
+  @include underline;
+}
+
+@media screen and (max-width: 768px) {
+  .itemLink {
+    font-size: 14px;
+  }
+}

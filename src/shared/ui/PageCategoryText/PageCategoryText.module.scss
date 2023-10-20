@@ -1,0 +1,55 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.pageCategoryText {
+  position: relative;
+}
+.title {
+  color: #fda3c4;
+  font-size: 54px;
+  font-family: $additionalFontFamily;
+  text-transform: uppercase;
+}
+.subtitle {
+  position: absolute;
+  left: 3px;
+  bottom: 4px;
+  color: $mainTextColor;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  pointer-events: none;
+  &::after {
+    content: url('./img/line.svg');
+    margin-left: 17px;
+    padding: 8px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 36px;
+  }
+  .subtitle {
+    font-size: 16px;
+    left: 0px;
+    bottom: 2px;
+    &::after {
+      content: url('./img/line-tablet.svg');
+      margin-left: 8px;
+      padding: 5px 0;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 26px;
+  }
+  .subtitle {
+    font-size: 14px;
+    &::after {
+      content: url('./img/line-mobile.svg');
+      margin-left: 4px;
+      padding: 5px 0;
+    }
+  }
+}

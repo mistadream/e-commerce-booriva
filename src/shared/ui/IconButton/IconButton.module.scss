@@ -1,0 +1,34 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.iconButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  cursor: pointer;
+  @include default-animation;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    transform: scale(1.2);
+  }
+  &:focus {
+    filter: invert(93%) sepia(59%) saturate(1634%) hue-rotate(289deg)
+      brightness(99%) contrast(101%);
+    transform: scale(1.2);
+  }
+}
+
+.buttonImage {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 1000px) {
+  .buttonImage {
+    width: 20px;
+    height: 20px;
+  }
+}

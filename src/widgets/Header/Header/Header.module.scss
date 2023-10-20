@@ -1,0 +1,133 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+// Header global
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.header::after {
+  content: ' ';
+  position: absolute;
+  height: 1px;
+  background: $secondaryAccentColor;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.headerContainer {
+  width: 1440px;
+  padding: 15px 150px;
+}
+
+//Header title
+.headerTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+//Header Info
+.headerInfo {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+}
+.headerPhone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $secondaryAccentColor;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: none;
+}
+.headerPhone::before {
+  content: url(./img/phone.svg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 7px;
+}
+.headerAdress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $secondaryAccentColor;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: none;
+}
+.headerAdress::before {
+  content: url(./img/location.svg);
+  margin-right: 7px;
+}
+// Logo
+.headerLogo {
+  @include default-animation;
+  position: relative;
+  outline: none;
+  &:hover {
+    filter: invert(93%) sepia(59%) saturate(1634%) hue-rotate(289deg)
+      brightness(99%) contrast(101%);
+  }
+  &:focus {
+    @include underline;
+  }
+}
+
+// Header features
+.headerFeatures {
+  display: flex;
+  justify-content: space-between;
+  gap: 115px;
+}
+.headerSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  padding: 0;
+  color: $mainTextColor;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.headerSearch::before {
+  content: url(./img/search.svg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+.headerButtons {
+  display: flex;
+  column-gap: 33px;
+}
+.headerWishlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  cursor: pointer;
+}
+.headerCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  cursor: pointer;
+}
+
+// Navbar
+.categoriesList {
+  display: flex;
+  justify-content: center;
+  column-gap: 72px;
+}
