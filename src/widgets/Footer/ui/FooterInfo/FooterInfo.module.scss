@@ -1,0 +1,12 @@
+@import '@/app/styles/_variables.scss';
+
+.footerInfo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+.infoList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}

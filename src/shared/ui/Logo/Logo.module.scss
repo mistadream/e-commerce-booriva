@@ -1,0 +1,47 @@
+@import '@/app/styles/_mixin.scss';
+
+// Logo
+.logoContainer {
+  @include flex-center;
+}
+.logoLink {
+  fill: $mainTextColor;
+  outline: none;
+}
+.LogoImage {
+  @include default-animation;
+}
+.headerLogo {
+  width: 160px;
+  height: 40px;
+  fill: $mainTextColor;
+  &:hover {
+    fill: $secondaryAccentColor;
+  }
+  @include laptop {
+    width: 110px;
+    height: 30px;
+  }
+  @include tablet-medium {
+    width: 82px;
+    height: 20px;
+  }
+  @include mobile-medium {
+    width: 70px;
+    height: 17px;
+  }
+}
+
+.footerContainer {
+  @include tablet-large {
+    display: none;
+  }
+}
+.footerLogo {
+  fill: $redAccentColor;
+  width: 95px;
+  height: 25px;
+  &:hover {
+    fill: $mainTextColor;
+  }
+}

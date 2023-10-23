@@ -22,7 +22,7 @@
     color: $activeAccentColor;
   }
 }
-@media screen and (max-width: 480px) {
+@include mobile-medium {
   .button {
     font-size: 12px;
   }

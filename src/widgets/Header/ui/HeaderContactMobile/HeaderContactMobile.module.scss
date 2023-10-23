@@ -1,0 +1,15 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.headerMobileContact {
+  display: none;
+  @include tablet-medium {
+    @include flex-center;
+  }
+}
+.headerPhone {
+  @include headerContactStyle;
+  &::before {
+    background-image: url(../../assets/svg/phone.svg);
+  }
+}

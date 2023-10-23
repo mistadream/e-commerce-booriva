@@ -1,0 +1,28 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+// Header global
+.header {
+  @include flex-center;
+  position: relative;
+  &::after {
+    content: ' ';
+    position: absolute;
+    height: 1px;
+    background: $secondaryAccentColor;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+.headerContainer {
+  @include container;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+//Header row
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+}

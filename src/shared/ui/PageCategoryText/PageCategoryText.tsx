@@ -1,21 +1,20 @@
 //react
-import { FC } from 'react';
+import { FC, memo } from 'react';
 // styles
 import cls from './PageCategoryText.module.scss';
 
-interface pageCategoryText {
-  children: string;
+interface pageCategoryTextProps {
+  title: string;
   subtitle: string;
 }
 
-export const PageCategoryText: FC<pageCategoryText> = ({
-  children,
-  subtitle,
-}) => {
-  return (
-    <div className={cls.pageCategoryText}>
-      <h1 className={cls.title}>{children}</h1>
-      <span className={cls.subtitle}>{subtitle}</span>
-    </div>
-  );
-};
+export const PageCategoryText: FC<pageCategoryTextProps> = memo(
+  ({ title, subtitle }) => {
+    return (
+      <div className={cls.pageCategoryText}>
+        <h1 className={cls.title}>{title}</h1>
+        <span className={cls.subtitle}>{subtitle}</span>
+      </div>
+    );
+  }
+);

@@ -1,0 +1,44 @@
+@import '@/app/styles/_mixin.scss';
+@import '@/app/styles/_variables.scss';
+
+// Navbar
+.navbar {
+  padding-top: 25px;
+  @include tablet-medium {
+    display: none;
+  }
+}
+.navList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.itemLink {
+  @include default-animation;
+  position: relative;
+  background: none;
+  color: $mainTextColor;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: $mainFontFamily;
+  &:hover {
+    color: $secondaryAccentColor;
+  }
+  &:active {
+    color: $activeAccentColor;
+  }
+  &:focus {
+    @include underline;
+  }
+  @include tablet-medium {
+    font-size: 14px;
+  }
+}
+
+.itemLinkActive {
+  color: $secondaryAccentColor;
+  font-style: italic;
+}

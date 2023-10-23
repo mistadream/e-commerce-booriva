@@ -12,13 +12,10 @@
     font-size: 14px;
     color: $secondaryAccentColor;
   }
-}
-
-@media screen and (max-width: 480px) {
-  .textArea {
+  @include mobile-medium {
     font-size: 14px;
-  }
-  .textArea::placeholder {
-    font-size: 12px;
+    &::placeholder {
+      font-size: 12px;
+    }
   }
 }

@@ -1,0 +1,29 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.headerСontacts {
+  display: flex;
+  gap: 10px;
+  @include laptop {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  @include tablet-medium {
+    display: none;
+  }
+}
+
+.headerPhone {
+  @include headerContactStyle;
+  &::before {
+    background-image: url(../../assets/svg/phone.svg);
+  }
+}
+.headerAdress {
+  @include headerContactStyle;
+  &::before {
+    background-image: url(../../assets/svg//location.svg);
+  }
+}

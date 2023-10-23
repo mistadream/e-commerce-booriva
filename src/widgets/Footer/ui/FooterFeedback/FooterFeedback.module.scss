@@ -1,0 +1,71 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.feedbackContainer {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  @include tablet-medium {
+    flex-direction: column;
+    row-gap: 12px;
+  }
+  @include mobile-medium {
+    align-items: center;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+}
+
+.photoImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  @include tablet-medium {
+    width: 32px;
+    height: 32px;
+  }
+  @include mobile-medium {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+.feedbackContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 20px;
+  @include mobile-medium {
+    row-gap: 15px;
+  }
+}
+.contentTitle {
+  font-size: 12px;
+  color: $secondaryTextColor;
+  @include tablet-medium {
+    font-size: 10px;
+  }
+}
+.contentLink {
+  @include default-animation;
+  color: $redAccentColor;
+  font-size: 12px;
+  font-family: $additionalFontFamily;
+  text-decoration: none;
+  border-bottom: 1px solid $redAccentColor;
+  &:hover {
+    color: $mainTextColor;
+    border-color: $mainTextColor;
+  }
+  &:active {
+    color: $mainTextColor;
+    border-color: $mainTextColor;
+  }
+  &:focus {
+    color: $mainTextColor;
+    border-color: $mainTextColor;
+  }
+  @include tablet-medium {
+    font-size: 10px;
+  }
+}

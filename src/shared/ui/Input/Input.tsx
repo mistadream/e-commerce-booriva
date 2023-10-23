@@ -1,13 +1,13 @@
 //react
-import { FC } from 'react';
+import { FC, memo } from 'react';
 // styles
 import cls from './Input.module.scss';
 
-interface input {
+interface inputProps {
   placeholder: string;
   type: string;
 }
 
-export const Input: FC<input> = ({ type, placeholder }) => {
+export const Input: FC<inputProps> = memo(({ type, placeholder }) => {
   return <input placeholder={placeholder} className={cls.input} type={type} />;
-};
+});

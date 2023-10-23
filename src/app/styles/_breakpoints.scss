@@ -1,0 +1,39 @@
+/* Portrait Mobile media mixin */
+
+@mixin mobile-small {
+  @media only screen and (max-width: 319.98px) {
+    @content;
+  }
+}
+
+/* Landscape Mobile media mixin */
+
+@mixin mobile-medium {
+  @media only screen and (max-width: 479.98px) {
+    @content;
+  }
+}
+
+/* Tablet medium */
+
+@mixin tablet-medium {
+  @media only screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+/* Tablet large */
+
+@mixin tablet-large {
+  @media only screen and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+/* Laptop */
+
+@mixin laptop {
+  @media only screen and (max-width: 1199.98px) {
+    @content;
+  }
+}

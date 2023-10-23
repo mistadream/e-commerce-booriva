@@ -1,0 +1,15 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.footer {
+  background-color: $secondaryAccentColor;
+}
+
+.footerContainer {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}

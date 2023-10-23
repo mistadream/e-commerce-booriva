@@ -1,15 +1,23 @@
 @import '@/app/styles/_variables.scss';
 @import '@/app/styles/_mixin.scss';
+@import '@/app/styles/_breakpoints.scss';
 
 .pageCategoryText {
   position: relative;
 }
 .title {
-  color: #fda3c4;
+  color: $secondaryAccentColor;
   font-size: 54px;
   font-family: $additionalFontFamily;
   text-transform: uppercase;
+  @include mobile-medium {
+    font-size: 36px;
+  }
+  @include mobile-small {
+    font-size: 26px;
+  }
 }
+
 .subtitle {
   position: absolute;
   left: 3px;
@@ -24,12 +32,7 @@
     margin-left: 17px;
     padding: 8px 0;
   }
-}
-@media screen and (max-width: 480px) {
-  .title {
-    font-size: 36px;
-  }
-  .subtitle {
+  @include mobile-medium {
     font-size: 16px;
     left: 0px;
     bottom: 2px;
@@ -39,12 +42,7 @@
       padding: 5px 0;
     }
   }
-}
-@media screen and (max-width: 320px) {
-  .title {
-    font-size: 26px;
-  }
-  .subtitle {
+  @include mobile-small {
     font-size: 14px;
     &::after {
       content: url('./img/line-mobile.svg');

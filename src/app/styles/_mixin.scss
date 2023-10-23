@@ -1,8 +1,42 @@
-@import './variables';
+@import './_variables.scss';
+@import './breakpoints.scss';
 
+// Container mixin
+@mixin container {
+  width: 100%;
+  max-width: 1440px;
+  padding-right: $desktop-padding;
+  padding-left: $desktop-padding;
+  margin: 0 auto;
+
+  @include laptop {
+    padding-right: $laptop-padding;
+    padding-left: $laptop-padding;
+  }
+  @include tablet-large {
+    padding-right: $tablet-large-padding;
+    padding-left: $tablet-large-padding;
+  }
+  @include tablet-medium {
+    padding-right: $tablet-medium-padding;
+    padding-left: $tablet-medium-padding;
+  }
+  @include mobile-medium {
+    padding-right: $mobile-medium-padding;
+    padding-left: $mobile-medium-padding;
+  }
+  @include mobile-small {
+    padding-right: $mobile-small-padding;
+    padding-left: $mobile-small-padding;
+  }
+}
+
+// Default animation mixin
 @mixin default-animation {
   transition: all 0.5s ease;
 }
+
+// Underline mixin
 @mixin underline {
   &::after {
     content: '';
@@ -20,14 +54,58 @@
     }
   }
 }
-
+// Border for input & textarea mixin
 @mixin input-textarea-border {
-  border: 2px $mainTextColor solid;
+  border: 2px #1f1f1f solid;
   border-radius: 4px;
 }
 
-@mixin flex-j-a-center {
+// Flex center mixin
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+// Header contact style
+
+@mixin headerContactStyle {
+  @include flex-center;
+  color: $secondaryAccentColor;
+  font-weight: 700;
+  font-size: 12px;
+  font-style: italic;
+  text-decoration: none;
+  outline-color: $secondaryAccentColor;
+  outline-offset: 2px;
+  @include laptop {
+    font-size: 11px;
+  }
+  @include tablet-medium {
+    font-size: 10px;
+  }
+  @include mobile-medium {
+    font-size: 8px;
+  }
+  &::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: $SvgFilter;
+    margin-right: 7px;
+    @include laptop {
+      width: 16px;
+      height: 16px;
+      background-size: 16px 16px;
+    }
+    @include mobile-medium {
+      width: 10px;
+      height: 10px;
+      background-size: 10px 10px;
+      margin-right: 4px;
+    }
+  }
 }

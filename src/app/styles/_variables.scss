@@ -1,8 +1,19 @@
 $mainTextColor: #1f1f1f;
 $secondaryAccentColor: #fda3c4;
+$SvgFilter: invert(93%) sepia(59%) saturate(1634%) hue-rotate(289deg)
+  brightness(99%) contrast(101%);
+$redAccentColor: #f40000;
+$secondaryTextColor: #fff;
 $buttonTextColor: #fff;
 $activeAccentColor: #f40000;
 $disabledButtonColor: #ffe6ef;
 $disabledTextColor: #909090;
 $mainFontFamily: 'Montserrat', sans-serif;
 $additionalFontFamily: 'SundayBest', sans-serif;
+
+$desktop-padding: 150px;
+$laptop-padding: 50px;
+$tablet-large-padding: 15px;
+$tablet-medium-padding: 15px;
+$mobile-medium-padding: 15px;
+$mobile-small-padding: 15px;

@@ -1,0 +1,74 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+// Header menu
+.headerMenu {
+  display: flex;
+  justify-content: space-between;
+  gap: 115px;
+  @include laptop {
+    gap: 50px;
+  }
+}
+.search {
+  @include flex-center;
+  background: none;
+  padding: 0;
+  color: $mainTextColor;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  &::before {
+    content: '';
+    background-image: url(../../assets/svg/search.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    @include flex-center;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    @include laptop {
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+    }
+    @include tablet-medium {
+      width: 24px;
+      height: 24px;
+      background-size: 24px 24px;
+      margin-right: 0;
+    }
+    @include mobile-medium {
+      width: 16px;
+      height: 16px;
+      background-size: 16px 16px;
+    }
+  }
+}
+.searchText {
+  @include tablet-medium {
+    display: none;
+  }
+}
+
+.headerButtons {
+  display: flex;
+  column-gap: 33px;
+  @include laptop {
+    column-gap: 55px;
+  }
+  @include tablet-medium {
+    display: none;
+  }
+}
+.headerWishlist {
+  @include flex-center;
+  background: none;
+  cursor: pointer;
+}
+.headerCart {
+  @include flex-center;
+  background: none;
+  cursor: pointer;
+}

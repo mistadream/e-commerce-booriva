@@ -15,8 +15,8 @@
     transform: scale(1.2);
   }
   &:focus {
-    filter: invert(93%) sepia(59%) saturate(1634%) hue-rotate(289deg)
-      brightness(99%) contrast(101%);
+    filter: $SvgFilter;
+    fill: $secondaryAccentColor;
     transform: scale(1.2);
   }
 }
@@ -24,10 +24,7 @@
 .buttonImage {
   width: 24px;
   height: 24px;
-}
-
-@media screen and (max-width: 1000px) {
-  .buttonImage {
+  @include laptop {
     width: 20px;
     height: 20px;
   }

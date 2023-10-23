@@ -1,0 +1,1 @@
+export { FooterInfoBlockTitle } from './FooterInfoBlockTitle';
