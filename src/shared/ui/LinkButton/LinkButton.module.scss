@@ -1,0 +1,25 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.link {
+  @include default-animation;
+  position: relative;
+  background: none;
+  color: $secondaryTextColor;
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: $mainFontFamily;
+  &:hover {
+    color: $redAccentColor;
+  }
+  &:active {
+    color: $activeAccentColor;
+  }
+  &:focus {
+    color: $redAccentColor;
+  }
+  @include mobile-small {
+    font-style: 11px;
+  }
+}

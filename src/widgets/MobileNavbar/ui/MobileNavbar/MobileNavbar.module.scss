@@ -1,0 +1,28 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.mobileNavbar {
+  @include underline($secondaryAccentColor, 100%);
+  display: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background-color: $secondaryTextColor;
+  z-index: 999;
+  @include tablet-medium {
+    display: block;
+  }
+}
+.navbarContainer {
+  display: flex;
+  justify-content: space-around;
+  @include container;
+  height: 100%;
+  @include mobile-medium {
+    justify-content: space-between;
+  }
+}

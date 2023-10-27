@@ -1,3 +1,5 @@
+// libs
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 // styles
 import cls from './FooterFeedback.module.scss';
 // img
@@ -7,7 +9,7 @@ export const FooterFeedback = () => {
   return (
     <div className={cls.feedbackContainer}>
       <div className={cls.feedbackPhoto}>
-        <img
+        <LazyLoadImage
           className={cls.photoImage}
           src={feedbackPhoto}
           alt="Feedback Photo"

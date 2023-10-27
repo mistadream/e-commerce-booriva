@@ -1,0 +1,8 @@
+.globalLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+.globalContent {
+  flex: 1 1 auto;
+}

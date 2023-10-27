@@ -1,15 +1,20 @@
+// hooks
+import { useGlobalContext } from '@/shared/hooks/useGlobalContext';
+// ui
+import { ContactElement } from '@/shared/ui/ContactElement';
 // styles
 import cls from './HeaderContacts.module.scss';
+// images
+import locationImg from '../../assets/svg/location.svg';
+import phoneImg from '../../assets/svg/phone.svg';
 
 export const HeaderContacts = () => {
+  const { phone, adress } = useGlobalContext();
+
   return (
     <div className={cls.headerСontacts}>
-      <a href="#" className={cls.headerAdress}>
-        Киев, Нижний вал, 37
-      </a>
-      <a href="#" className={cls.headerPhone}>
-        +38 063 843 34 71
-      </a>
+      <ContactElement img={locationImg} alt="adress" contactInfo={adress} />
+      <ContactElement img={phoneImg} alt="phone" contactInfo={phone} />
     </div>
   );
 };

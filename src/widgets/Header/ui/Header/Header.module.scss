@@ -4,16 +4,8 @@
 // Header global
 .header {
   @include flex-center;
+  @include underline($secondaryAccentColor, 0);
   position: relative;
-  &::after {
-    content: ' ';
-    position: absolute;
-    height: 1px;
-    background: $secondaryAccentColor;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
 }
 .headerContainer {
   @include container;

@@ -1,13 +1,25 @@
-//modules
-import { Footer } from '@/widgets/Footer';
-import { Header } from '@/widgets/Header';
+// react
+import { Routes, Route } from 'react-router-dom';
+// layouts
+import { GlobalLayout } from './layouts/GlobalLayout/GlobalLayout';
+// pages
+import { Main } from './pages/Main';
+// providers
+import { GlobalProvider } from '@/app/providers/context/global/globalProvider';
+// constants
+import { getMainRoute } from '@/shared/constants/routes';
 
 const App = () => {
   return (
-    <div className="app">
-      <Header />
-      <Footer />
-    </div>
+    <GlobalProvider>
+      <div className="app">
+        <Routes>
+          <Route element={<GlobalLayout />}>
+            <Route path={getMainRoute()} element={<Main />}></Route>
+          </Route>
+        </Routes>
+      </div>
+    </GlobalProvider>
   );
 };
 

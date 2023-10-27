@@ -14,16 +14,3 @@
     display: none;
   }
 }
-
-.headerPhone {
-  @include headerContactStyle;
-  &::before {
-    background-image: url(../../assets/svg/phone.svg);
-  }
-}
-.headerAdress {
-  @include headerContactStyle;
-  &::before {
-    background-image: url(../../assets/svg//location.svg);
-  }
-}

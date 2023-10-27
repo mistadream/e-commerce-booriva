@@ -1,0 +1,27 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.contactElement {
+  @include flex-center;
+  gap: 7px;
+  color: $secondaryAccentColor;
+  font-weight: 700;
+  font-size: 12px;
+  font-style: italic;
+  text-decoration: none;
+  outline-color: $secondaryAccentColor;
+  outline-offset: 2px;
+  @include mobile-medium {
+    gap: 4px;
+  }
+}
+
+.contactImage {
+  width: 24px;
+  height: 24px;
+  filter: $SvgFilter;
+  @include laptop {
+    width: 16px;
+    height: 16px;
+  }
+}

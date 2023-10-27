@@ -1,14 +1,27 @@
-// styles
+// hook
+import { useGlobalContext } from '@/shared/hooks/useGlobalContext';
+// ui
+import { LinkButton } from '@/shared/ui/LinkButton';
 import { FooterInfoBlockTitle } from '../FooterInfoBlockTitle';
+// styles
 import cls from './FooterLocation.module.scss';
 
 export const FooterLocation = () => {
+  const { adress, phone, workTime } = useGlobalContext();
+
   return (
     <div className={cls.footerLocation}>
       <FooterInfoBlockTitle>НАШ АДРЕС</FooterInfoBlockTitle>
-      <ul className={cls.locarionList}>
-        <li className={cls.listItem}>г.Киев, ул. Нижний Вал, 37</li>
-        <li className={cls.listItem}>Пн — Вс: с 11:00 до 21:00</li>
+      <ul className={cls.infoList}>
+        <li className={cls.infoItem}>
+          <LinkButton>{adress}</LinkButton>
+        </li>
+        <li className={cls.infoItem}>
+          <span className={cls.info}>{workTime}</span>
+        </li>
+        <li className={cls.infoItem}>
+          <LinkButton>{phone}</LinkButton>
+        </li>
       </ul>
     </div>
   );

@@ -11,7 +11,7 @@ export const Footer = () => {
   return (
     <footer className={cls.footer}>
       <div className={cls.footerContainer}>
-        <Logo footer={true} />
+        <Logo variant="footer" />
         <FooterInfo />
         <FooterLocation />
         <FooterSocial />

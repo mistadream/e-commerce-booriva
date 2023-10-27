@@ -1,0 +1,80 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+@mixin icon-button-events($filterColor) {
+  .buttonImage {
+    filter: $filterColor;
+  }
+  transform: scale(1.2);
+}
+@mixin events-filter($filter-color) {
+  &:hover {
+    @include icon-button-events($filter-color);
+  }
+  &:active {
+    @include icon-button-events($filter-color);
+  }
+  &:focus {
+    @include icon-button-events($filter-color);
+  }
+}
+
+.iconButton {
+  @include flex-center;
+  flex-direction: column;
+  gap: 4px;
+  @include default-animation;
+  text-decoration: none;
+  outline: none;
+}
+
+.headerButton {
+  @include events-filter($SvgFilter);
+}
+
+.footerButton {
+  @include events-filter(none);
+}
+
+.mobileNavButton {
+  @include events-filter($SvgFilter);
+}
+
+.headerButtonImage {
+  width: 24px;
+  height: 24px;
+  @include laptop {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.footerButtonImage {
+  width: 20px;
+  height: 20px;
+  @include tablet-medium {
+    width: 18px;
+    height: 18px;
+  }
+  @include mobile-medium {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.mobileNavButtonImage {
+  width: 32px;
+  height: 32px;
+  @include mobile-medium {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.iconText {
+  display: block;
+  color: $mainTextColor;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}

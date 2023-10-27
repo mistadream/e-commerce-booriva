@@ -9,26 +9,31 @@ import cls from './Logo.module.scss';
 import PageLogo from './svg/logo.svg?react';
 
 interface LogoProps {
-  header?: boolean;
-  footer?: boolean;
+  variant: 'header' | 'footer';
 }
 
-export const Logo: FC<LogoProps> = memo(({ header, footer }) => {
+export const Logo: FC<LogoProps> = memo(({ variant }) => {
+  const headerVariant = variant === 'header';
+
+  const footerVariant = variant === 'footer';
+
   return (
     <div
-      className={classNames(
-        cls.logoContainer,
-        header ? [cls.headerContainer] : null,
-        footer ? [cls.footerContainer] : null
-      )}
+      className={classNames(cls.logoContainer, {
+        [cls.headerContainer]: headerVariant,
+        [cls.footerContainer]: footerVariant,
+      })}
     >
-      <NavLink to={'/#'} className={cls.logoLink}>
+      <NavLink
+        to={'/#'}
+        className={cls.logoLink}
+        aria-label="Page logo, go to main page"
+      >
         <PageLogo
-          className={classNames(
-            cls.LogoImage,
-            header ? [cls.headerLogo] : null,
-            footer ? [cls.footerLogo] : null
-          )}
+          className={classNames(cls.LogoImage, {
+            [cls.headerLogo]: headerVariant,
+            [cls.footerLogo]: footerVariant,
+          })}
         />
       </NavLink>
     </div>

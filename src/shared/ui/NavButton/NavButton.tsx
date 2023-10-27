@@ -12,7 +12,7 @@ interface NavButtonProps {
 
 export const NavButton: FC<NavButtonProps> = memo(({ children }) => {
   return (
-    <NavLink to={'/#'} className={classNames(cls.link)}>
+    <NavLink to={'/'} className={classNames(cls.link)}>
       {children}
     </NavLink>
   );

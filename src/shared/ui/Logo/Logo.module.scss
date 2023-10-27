@@ -1,5 +1,14 @@
 @import '@/app/styles/_mixin.scss';
 
+@mixin logo-events {
+  .headerLogo {
+    fill: $secondaryAccentColor;
+  }
+  .footerLogo {
+    fill: $mainTextColor;
+  }
+}
+
 // Logo
 .logoContainer {
   @include flex-center;
@@ -7,6 +16,12 @@
 .logoLink {
   fill: $mainTextColor;
   outline: none;
+  &:hover {
+    @include logo-events;
+  }
+  &:focus {
+    @include logo-events;
+  }
 }
 .LogoImage {
   @include default-animation;
@@ -41,7 +56,4 @@
   fill: $redAccentColor;
   width: 95px;
   height: 25px;
-  &:hover {
-    fill: $mainTextColor;
-  }
 }

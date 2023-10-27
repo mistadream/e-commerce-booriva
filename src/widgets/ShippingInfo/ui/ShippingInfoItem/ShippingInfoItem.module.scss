@@ -1,0 +1,46 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.infoItem {
+  @include flex-center;
+  column-gap: 30px;
+  @include tablet-medium {
+    column-gap: 10px;
+  }
+}
+.itemImage {
+  width: 81px;
+  height: 98px;
+  @include tablet-medium {
+    width: 70px;
+    height: 85px;
+  }
+  @include mobile-medium {
+    align-self: flex-start;
+  }
+}
+.itemContent {
+  @include column-flex(15px);
+  align-items: center;
+  text-align: center;
+  @include tablet-medium {
+    row-gap: 10px;
+    width: 165px;
+  }
+}
+.contentTitle {
+  color: $mainTextColor;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0 auto;
+  @include tablet-medium {
+    font-size: 16px;
+  }
+}
+.contentSubtitle {
+  color: $mainTextColor;
+  text-transform: uppercase;
+  @include tablet-medium {
+    font-size: 12px;
+  }
+}

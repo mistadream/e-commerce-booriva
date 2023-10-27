@@ -12,4 +12,14 @@
   align-items: flex-start;
   padding-top: 60px;
   padding-bottom: 60px;
+  flex-wrap: wrap;
+  row-gap: 25px;
+  @include tablet-large {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @include tablet-medium {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }

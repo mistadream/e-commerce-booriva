@@ -2,9 +2,10 @@
 @import '@/app/styles/_mixin.scss';
 
 .button {
-  background: url('./img/bg-color.svg');
+  background: url('./svg/bg-color.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  width: 180px;
   font-size: 14px;
   font-family: $additionalFontFamily;
   color: $buttonTextColor;
@@ -19,11 +20,16 @@
   text-wrap: nowrap;
   @include default-animation;
   &:hover {
-    color: $activeAccentColor;
+    background: url('./svg/bg-color-event.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 @include mobile-medium {
   .button {
+    width: 160px;
+    padding-left: 25px;
+    padding-right: 25px;
     font-size: 12px;
   }
 }

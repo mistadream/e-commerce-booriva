@@ -1,0 +1,14 @@
+@import '@/app/styles/_mixin.scss';
+
+.footerSocial {
+  @include column-flex(15px);
+  @include tablet-large {
+    display: none;
+  }
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

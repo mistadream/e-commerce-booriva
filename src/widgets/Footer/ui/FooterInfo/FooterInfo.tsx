@@ -1,25 +1,40 @@
+// libs
+import classNames from 'classnames';
 // ui
-import { NavButton } from '@/shared/ui/NavButton';
+import { LinkButton } from '@/shared/ui/LinkButton';
+import { IconButton } from '@/shared/ui/IconButton';
 import { FooterInfoBlockTitle } from '../FooterInfoBlockTitle';
+// model
+import { linkList } from './model/linkList';
 // styles
 import cls from './FooterInfo.module.scss';
+// img
+import facebookLogo from '../../assets/svg/facebook-logo.svg';
+import instagramLogo from '../../assets/svg/instagram-logo.svg';
 
 export const FooterInfo = () => {
   return (
     <div className={cls.footerInfo}>
       <FooterInfoBlockTitle>ИНФО</FooterInfoBlockTitle>
       <ul className={cls.infoList}>
-        <li className={cls.listItem}>
-          <NavButton>Контакты</NavButton>
-        </li>
-        <li className={cls.listItem}>
-          <NavButton>Система лояльности</NavButton>
-        </li>
-        <li className={cls.listItem}>
-          <NavButton>Обмен и возврат</NavButton>
-        </li>
-        <li className={cls.listItem}>
-          <NavButton>Доставка и оплата</NavButton>
+        {linkList.map((item) => {
+          return (
+            <li key={item.id} className={cls.listItem}>
+              <LinkButton>{item.name}</LinkButton>
+            </li>
+          );
+        })}
+        <li className={classNames(cls.listItem, cls.socialItem)}>
+          <IconButton
+            variant="footer"
+            altValue="facebook logo"
+            img={facebookLogo}
+          ></IconButton>
+          <IconButton
+            variant="footer"
+            altValue="instagram logo"
+            img={instagramLogo}
+          ></IconButton>
         </li>
       </ul>
     </div>

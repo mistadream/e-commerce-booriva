@@ -37,21 +37,26 @@
 }
 
 // Underline mixin
-@mixin underline {
+@mixin underline($color, $bottom-value) {
   &::after {
     content: '';
     height: 1px;
     left: 0;
-    bottom: 0;
+    bottom: $bottom-value;
     width: 10%;
     position: absolute;
-    background: $mainTextColor;
+    background: $color;
     animation: underline 1s forwards;
   }
   @keyframes underline {
     100% {
       width: 100%;
     }
+  }
+}
+@mixin underline-events-color($color) {
+  &::after {
+    background: $color;
   }
 }
 // Border for input & textarea mixin
@@ -67,45 +72,9 @@
   align-items: center;
 }
 
-// Header contact style
-
-@mixin headerContactStyle {
-  @include flex-center;
-  color: $secondaryAccentColor;
-  font-weight: 700;
-  font-size: 12px;
-  font-style: italic;
-  text-decoration: none;
-  outline-color: $secondaryAccentColor;
-  outline-offset: 2px;
-  @include laptop {
-    font-size: 11px;
-  }
-  @include tablet-medium {
-    font-size: 10px;
-  }
-  @include mobile-medium {
-    font-size: 8px;
-  }
-  &::before {
-    content: '';
-    width: 24px;
-    height: 24px;
-    background-size: 24px 24px;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: $SvgFilter;
-    margin-right: 7px;
-    @include laptop {
-      width: 16px;
-      height: 16px;
-      background-size: 16px 16px;
-    }
-    @include mobile-medium {
-      width: 10px;
-      height: 10px;
-      background-size: 10px 10px;
-      margin-right: 4px;
-    }
-  }
+// Column flex
+@mixin column-flex($gap) {
+  display: flex;
+  flex-direction: column;
+  row-gap: $gap;
 }

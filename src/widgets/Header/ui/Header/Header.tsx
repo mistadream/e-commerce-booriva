@@ -1,12 +1,12 @@
 // ui
 import { Navbar } from '../Navbar';
 import { HeaderContacts } from '../HeaderContacts';
-import { Logo } from '@/shared/ui/Logo';
 import { HeaderMenu } from '../HeaderMenu';
+import { Logo } from '@/shared/ui/Logo';
 
-//styles
+// styles
 import cls from './Header.module.scss';
-import { HeaderContactMobile } from '../HeaderContactMobile';
+import { HeaderContactsMobile } from '../HeaderContacts/mobile';
 
 export const Header = () => {
   return (
@@ -14,8 +14,8 @@ export const Header = () => {
       <div className={cls.headerContainer}>
         <div className={cls.headerRow}>
           <HeaderContacts />
-          <Logo header={true} />
-          <HeaderContactMobile />
+          <Logo variant="header" />
+          <HeaderContactsMobile />
           <HeaderMenu />
         </div>
         <Navbar />

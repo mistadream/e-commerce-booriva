@@ -1,0 +1,14 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.footerLocation {
+  @include column-flex(15px);
+}
+.infoList {
+  @include column-flex(10px);
+}
+
+.info {
+  font-size: 12px;
+  color: $secondaryTextColor;
+}

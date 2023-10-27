@@ -1,0 +1,19 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.shippingInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  @include tablet-large {
+    justify-content: center;
+    column-gap: 150px;
+    row-gap: 40px;
+  }
+  @include tablet-medium {
+    column-gap: 50px;
+    row-gap: 30px;
+  }
+}
