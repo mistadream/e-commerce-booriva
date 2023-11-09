@@ -2,9 +2,6 @@
 
 .footerSocial {
   @include column-flex(15px);
-  @include tablet-large {
-    display: none;
-  }
 }
 
 .iconContainer {

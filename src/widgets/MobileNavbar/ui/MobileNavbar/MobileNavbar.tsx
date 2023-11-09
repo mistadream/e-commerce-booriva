@@ -1,41 +1,32 @@
+//hooks
+import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
 // ui
 import { IconButton } from '@/shared/ui/IconButton';
+// model
+import { iconsList } from '../../model/iconsList';
 // styles
 import cls from './MobileNavbar.module.scss';
 
-// img
-import imagess from '../../assets/svg/bag.svg';
-
 export const MobileNavbar = () => {
+  const navbarRender = useMediaQuery('(max-width: 767.98px)');
+
   return (
-    <div className={cls.mobileNavbar}>
-      {/* TODO Create array, and map*/}
-      <div className={cls.navbarContainer}>
-        <IconButton
-          img={imagess}
-          altValue="bag"
-          variant="mobileNav"
-          text="Меню"
-        />
-        <IconButton
-          img={imagess}
-          altValue="bag"
-          variant="mobileNav"
-          text="Меню"
-        />
-        <IconButton
-          img={imagess}
-          altValue="bag"
-          variant="mobileNav"
-          text="Меню"
-        />
-        <IconButton
-          img={imagess}
-          altValue="bag"
-          variant="mobileNav"
-          text="Меню"
-        />
+    navbarRender && (
+      <div className={cls.mobileNavbar}>
+        <div className={cls.navbarContainer}>
+          {iconsList.map((icon, index) => {
+            return (
+              <IconButton
+                img={icon.img}
+                altValue={icon.altValue}
+                variant="mobileNav"
+                text={icon.text}
+                key={index}
+              />
+            );
+          })}
+        </div>
       </div>
-    </div>
+    )
   );
 };

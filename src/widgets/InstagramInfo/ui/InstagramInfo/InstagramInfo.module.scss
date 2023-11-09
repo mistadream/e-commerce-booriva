@@ -1,0 +1,13 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.instagramInfoContainer {
+  @include container;
+  display: flex;
+  justify-content: space-around;
+  @include tablet-large {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

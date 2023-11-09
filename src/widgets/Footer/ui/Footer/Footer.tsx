@@ -1,3 +1,5 @@
+// hooks
+import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
 // ui
 import { FooterSocial } from '../FooterSocial';
 import { FooterFeedback } from '../FooterFeedback';
@@ -8,10 +10,12 @@ import { Logo } from '@/shared/ui/Logo';
 import cls from './Footer.module.scss';
 
 export const Footer = () => {
+  const logoRender = useMediaQuery('(min-width: 991.98px)');
+
   return (
     <footer className={cls.footer}>
       <div className={cls.footerContainer}>
-        <Logo variant="footer" />
+        {logoRender && <Logo variant="footer" />}
         <FooterInfo />
         <FooterLocation />
         <FooterSocial />

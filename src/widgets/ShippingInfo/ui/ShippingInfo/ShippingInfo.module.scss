@@ -1,7 +1,8 @@
 @import '@/app/styles/_variables.scss';
 @import '@/app/styles/_mixin.scss';
 
-.shippingInfo {
+.shippingInfoContainer {
+  @include container;
   display: flex;
   align-items: center;
   justify-content: space-between;

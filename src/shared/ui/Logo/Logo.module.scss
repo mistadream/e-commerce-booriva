@@ -9,7 +9,6 @@
   }
 }
 
-// Logo
 .logoContainer {
   @include flex-center;
 }
@@ -23,7 +22,7 @@
     @include logo-events;
   }
 }
-.LogoImage {
+.logoImage {
   @include default-animation;
 }
 .headerLogo {
@@ -47,11 +46,6 @@
   }
 }
 
-.footerContainer {
-  @include tablet-large {
-    display: none;
-  }
-}
 .footerLogo {
   fill: $redAccentColor;
   width: 95px;

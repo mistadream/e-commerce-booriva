@@ -33,7 +33,7 @@
     padding: 8px 0;
   }
   @include mobile-medium {
-    font-size: 16px;
+    font-size: $mainFontSize;
     left: 0px;
     bottom: 2px;
     &::after {

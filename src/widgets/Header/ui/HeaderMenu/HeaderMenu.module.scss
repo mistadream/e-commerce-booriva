@@ -46,20 +46,12 @@
     }
   }
 }
-.searchText {
-  @include tablet-medium {
-    display: none;
-  }
-}
 
 .headerButtons {
   display: flex;
   column-gap: 33px;
   @include laptop {
     column-gap: 55px;
-  }
-  @include tablet-medium {
-    display: none;
   }
 }
 .headerWishlist {

@@ -1,0 +1,1 @@
+export { InstagramInfoSecondElement } from './InstagramInfoSecondElement';

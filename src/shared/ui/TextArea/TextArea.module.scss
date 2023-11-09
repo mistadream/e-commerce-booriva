@@ -6,16 +6,9 @@
   width: 100%;
   height: 100px;
   padding: 10px;
-  font-size: 14px;
+  font-size: $mainFontSize;
   resize: none;
   &::placeholder {
-    font-size: 14px;
     color: $secondaryAccentColor;
-  }
-  @include mobile-medium {
-    font-size: 14px;
-    &::placeholder {
-      font-size: 12px;
-    }
   }
 }

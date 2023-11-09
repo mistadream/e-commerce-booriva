@@ -7,16 +7,16 @@ import cls from './ShippingInfoItem.module.scss';
 
 interface ShippingInfoItemProps {
   img: string;
-  title: string;
-  subtitle: string;
+  titleFirstLine: string;
+  titleSecondLine: string;
   alt: string;
   description: string;
 }
 
 export const ShippingInfoItem: FC<ShippingInfoItemProps> = ({
   img,
-  title,
-  subtitle,
+  titleFirstLine,
+  titleSecondLine,
   description,
   alt,
 }) => {
@@ -25,8 +25,9 @@ export const ShippingInfoItem: FC<ShippingInfoItemProps> = ({
       <LazyLoadImage className={cls.itemImage} src={img} alt={alt} />
       <div className={cls.itemContent}>
         <div className={cls.contentTitle}>
-          <p>{title}</p>
-          <p>{subtitle}</p>
+          {titleFirstLine}
+          <br />
+          {titleSecondLine}
         </div>
         <p className={cls.contentDescription}>{description}</p>
       </div>

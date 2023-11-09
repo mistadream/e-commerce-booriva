@@ -1,0 +1,55 @@
+@import '@/app/styles/_variables.scss';
+@import '@/app/styles/_mixin.scss';
+
+.firstElem {
+  @include column-flex(40px);
+  justify-content: flex-start;
+  @include tablet-large {
+    flex-direction: row;
+    gap: 10px;
+  }
+  @include tablet-medium {
+    flex-direction: column;
+  }
+}
+.firstElemText {
+  @include column-flex(0);
+}
+.firstElementTitle {
+  color: $mainTextColor;
+  font-size: 54px;
+  font-family: $additionalFontFamily;
+  font-weight: 400;
+  text-transform: uppercase;
+  @include tablet-medium {
+    font-size: 36px;
+  }
+}
+.firstElementSubtitle {
+  color: $mainTextColor;
+  font-size: 16px;
+  font-family: $mainFontFamily;
+  font-weight: 400;
+}
+.firstElementImages {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+}
+.elemImageFirst {
+  width: 205px;
+  height: 205px;
+  @include mobile-medium {
+    width: 140px;
+    height: 140px;
+  }
+}
+.elemImageSecond {
+  width: 170px;
+  height: 170px;
+  @include mobile-medium {
+    width: 110px;
+    height: 110px;
+  }
+}

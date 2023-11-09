@@ -1,16 +1,13 @@
-// libs
-import { v4 as uuidv4 } from 'uuid';
 // images
-import return1 from '../../../assets/svg/return_1.svg';
-import return2 from '../../../assets/svg/return_2.svg';
-import return3 from '../../../assets/svg/return_3.svg';
-import return4 from '../../../assets/svg/return_4.svg';
+import return1 from '../assets/svg/return_1.svg';
+import return2 from '../assets/svg/return_2.svg';
+import return3 from '../assets/svg/return_3.svg';
+import return4 from '../assets/svg/return_4.svg';
 
 interface ReturnInfoList {
   img: string;
   text: string;
   alt: string;
-  id: string;
 }
 
 export const returnInfoList: ReturnInfoList[] = [
@@ -22,14 +19,12 @@ export const returnInfoList: ReturnInfoList[] = [
     не стиралась. Для этого свяжитесь с
     нами любым удобным способом.`,
     alt: 'return image',
-    id: uuidv4(),
   },
   {
     img: return2,
     text: `Вещи, которые вы отправляете нам,
     мы забираем с почты 2 раза в неделю.`,
     alt: 'return image',
-    id: uuidv4(),
   },
   {
     img: return3,
@@ -37,7 +32,6 @@ export const returnInfoList: ReturnInfoList[] = [
     в тот же либо на следующий день, 
     после того как забрали вещь с почты.`,
     alt: 'return image',
-    id: uuidv4(),
   },
   {
     img: return4,
@@ -46,6 +40,5 @@ export const returnInfoList: ReturnInfoList[] = [
     как забрали вещь с почты и получили
     реквизиты для возврата.`,
     alt: 'return image',
-    id: uuidv4(),
   },
 ];

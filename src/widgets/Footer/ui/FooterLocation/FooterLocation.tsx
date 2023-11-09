@@ -1,5 +1,5 @@
 // hook
-import { useGlobalContext } from '@/shared/hooks/useGlobalContext';
+import { useAppContext } from '@/shared/hooks/useAppContext';
 // ui
 import { LinkButton } from '@/shared/ui/LinkButton';
 import { FooterInfoBlockTitle } from '../FooterInfoBlockTitle';
@@ -7,7 +7,7 @@ import { FooterInfoBlockTitle } from '../FooterInfoBlockTitle';
 import cls from './FooterLocation.module.scss';
 
 export const FooterLocation = () => {
-  const { adress, phone, workTime } = useGlobalContext();
+  const { adress, phone, workTime } = useAppContext();
 
   return (
     <div className={cls.footerLocation}>

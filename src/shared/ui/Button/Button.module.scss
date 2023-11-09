@@ -20,9 +20,11 @@
   text-wrap: nowrap;
   @include default-animation;
   &:hover {
-    background: url('./svg/bg-color-event.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    color: $activeAccentColor;
+    transform: scale(1.1);
+    @include default-animation;
   }
 }
 @include mobile-medium {

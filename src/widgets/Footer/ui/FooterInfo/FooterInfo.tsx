@@ -1,3 +1,5 @@
+// hooks
+import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
 // libs
 import classNames from 'classnames';
 // ui
@@ -13,6 +15,8 @@ import facebookLogo from '../../assets/svg/facebook-logo.svg';
 import instagramLogo from '../../assets/svg/instagram-logo.svg';
 
 export const FooterInfo = () => {
+  const socialRender = useMediaQuery('(min-width: 991.98px)');
+
   return (
     <div className={cls.footerInfo}>
       <FooterInfoBlockTitle>ИНФО</FooterInfoBlockTitle>
@@ -24,18 +28,20 @@ export const FooterInfo = () => {
             </li>
           );
         })}
-        <li className={classNames(cls.listItem, cls.socialItem)}>
-          <IconButton
-            variant="footer"
-            altValue="facebook logo"
-            img={facebookLogo}
-          ></IconButton>
-          <IconButton
-            variant="footer"
-            altValue="instagram logo"
-            img={instagramLogo}
-          ></IconButton>
-        </li>
+        {socialRender && (
+          <li className={classNames(cls.listItem, cls.socialItem)}>
+            <IconButton
+              variant="footer"
+              altValue="facebook logo"
+              img={facebookLogo}
+            ></IconButton>
+            <IconButton
+              variant="footer"
+              altValue="instagram logo"
+              img={instagramLogo}
+            ></IconButton>
+          </li>
+        )}
       </ul>
     </div>
   );

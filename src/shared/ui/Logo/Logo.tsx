@@ -30,7 +30,7 @@ export const Logo: FC<LogoProps> = memo(({ variant }) => {
         aria-label="Page logo, go to main page"
       >
         <PageLogo
-          className={classNames(cls.LogoImage, {
+          className={classNames(cls.logoImage, {
             [cls.headerLogo]: headerVariant,
             [cls.footerLogo]: footerVariant,
           })}

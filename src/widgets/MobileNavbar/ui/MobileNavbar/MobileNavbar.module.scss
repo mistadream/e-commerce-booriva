@@ -3,7 +3,6 @@
 
 .mobileNavbar {
   @include underline($secondaryAccentColor, 100%);
-  display: none;
   padding-top: 10px;
   padding-bottom: 10px;
   position: sticky;
@@ -13,9 +12,6 @@
   height: 80px;
   background-color: $secondaryTextColor;
   z-index: 999;
-  @include tablet-medium {
-    display: block;
-  }
 }
 .navbarContainer {
   display: flex;

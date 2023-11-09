@@ -8,10 +8,7 @@
   @include column-flex(10px);
 }
 .socialItem {
-  display: none;
-  @include tablet-large {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }

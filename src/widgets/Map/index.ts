@@ -1,1 +1,3 @@
-export { Map } from './ui/Map/Map';
+import { lazy } from 'react';
+
+export const MapLazy = lazy(() => import('./ui/Map/Map'));

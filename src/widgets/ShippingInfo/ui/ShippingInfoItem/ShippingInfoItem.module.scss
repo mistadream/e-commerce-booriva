@@ -34,10 +34,10 @@
   font-weight: 600;
   margin: 0 auto;
   @include tablet-medium {
-    font-size: 16px;
+    font-size: $mainFontSize;
   }
 }
-.contentSubtitle {
+.contentDescription {
   color: $mainTextColor;
   text-transform: uppercase;
   @include tablet-medium {

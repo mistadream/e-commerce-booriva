@@ -6,9 +6,9 @@ import { Footer } from '@/widgets/Footer';
 import { MobileNavbar } from '@/widgets/MobileNavbar';
 
 // styles
-import cls from './GlobalLayout.module.scss';
+import cls from './AppLayout.module.scss';
 
-export const GlobalLayout = () => {
+export const AppLayout = () => {
   return (
     <div className={cls.globalLayout}>
       <Header />

@@ -2,8 +2,5 @@
 @import '@/app/styles/_mixin.scss';
 
 .headerMobileContacts {
-  display: none;
-  @include tablet-medium {
-    @include flex-center;
-  }
+  @include flex-center;
 }

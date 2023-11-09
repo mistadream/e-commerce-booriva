@@ -18,8 +18,8 @@ export const RadioButton: FC<radioButtonProps> = memo(
     return (
       <div className={cls.radioContainer}>
         <input
-          defaultChecked={checked}
           className={cls.radioButton}
+          defaultChecked={checked}
           id={id}
           type="radio"
           name={name}
